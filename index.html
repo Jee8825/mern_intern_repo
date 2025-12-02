@@ -1,0 +1,135 @@
+<!-- FILE: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeevanandh B – Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes breathe {
+      0%, 100% { 
+        background-color: rgb(17, 24, 39);
+      }
+      50% { 
+        background-color: rgb(31, 41, 55);
+      }
+    }
+    @keyframes breatheBoxDark {
+      0%, 100% { 
+        background-color: rgb(31, 41, 55);
+      }
+      50% { 
+        background-color: rgb(17, 24, 39);
+      }
+    }
+    body {
+      animation: breathe 6s ease-in-out infinite;
+    }
+    .glow-box {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease-in-out;
+      animation: breatheBoxDark 6s ease-in-out infinite;
+    }
+    .glow-box:hover {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+      transform: scale(1.02);
+      animation: flash 0.3s ease-in-out;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 flex flex-col min-h-screen">
+  <nav class="bg-gray-800 p-4 flex justify-between items-center shadow-lg">
+    <h1 class="font-bold text-xl">Jeevanandh</h1>
+    <div class="space-x-6 flex">
+      <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+      <a href="about.html" class="hover:text-blue-400 transition-colors">About</a>
+      <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+      <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <header class="text-center py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+    <h1 class="text-5xl font-bold">Welcome to My Portfolio</h1>
+    <p class="mt-4 text-gray-400">AI & DS Student • Developer • Programmer</p>
+  </header>
+
+  <section class="max-w-6xl mx-auto mt-16 p-6 flex-grow">
+    <h2 class="text-3xl font-semibold mb-12 text-center">Welcome!</h2>
+    
+    <!-- Quick Intro -->
+    <div class="glow-box bg-gray-800 rounded-xl p-8 mb-12 border border-gray-700">
+      <p class="text-lg text-gray-300 leading-relaxed text-center">
+        I'm Jeevanandh, a passionate B.Tech AI & Data Science student from Sri Eshwar College of Engineering. 
+        I specialize in building intelligent systems, developing full-stack applications, and solving real-world problems with code. 
+        Explore my portfolio to learn more about my projects, skills, and experience!
+      </p>
+    </div>
+
+    <!-- Highlights Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-8 text-center">Highlights</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="glow-box p-6 bg-gray-800 rounded-xl border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-bold text-blue-400 mb-3">🚀 Skills Overview</h4>
+          <p class="text-gray-300">Proficient in Python, Java, JavaScript, and modern frameworks. Expertise in AI/ML, web development, and data analysis.</p>
+        </div>
+        <div class="glow-box p-6 bg-gray-800 rounded-xl border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-bold text-blue-400 mb-3">🤖 AI Projects</h4>
+          <p class="text-gray-300">Built intelligent systems including plastic identification models and data-driven applications using TensorFlow and Scikit-learn.</p>
+        </div>
+        <div class="glow-box p-6 bg-gray-800 rounded-xl border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-bold text-blue-400 mb-3">⭐ Achievements</h4>
+          <p class="text-gray-300">Developed full-stack applications, contributed to real-world projects, and continuously learning new technologies.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Technologies -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-8 text-center">Tech Stack</h3>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer text-center">
+          <p class="text-blue-400 font-bold text-lg mb-2">Languages</p>
+          <p class="text-gray-300 text-sm">Python, Java, C++, JavaScript</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer text-center">
+          <p class="text-blue-400 font-bold text-lg mb-2">Web Tech</p>
+          <p class="text-gray-300 text-sm">HTML5, CSS3, React, Node.js</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer text-center">
+          <p class="text-blue-400 font-bold text-lg mb-2">AI/ML</p>
+          <p class="text-gray-300 text-sm">TensorFlow, Pandas, NumPy</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer text-center">
+          <p class="text-blue-400 font-bold text-lg mb-2">Databases</p>
+          <p class="text-gray-300 text-sm">MySQL, MongoDB, Firebase</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="glow-box bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl p-8 border border-gray-600 text-center">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">Ready to Collaborate?</h3>
+      <p class="text-gray-300 mb-6">Check out my projects, connect with me, or reach out for opportunities and partnerships!</p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="projects.html" class="glow-box bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">View Projects</a>
+        <a href="contact.html" class="glow-box bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">Get in Touch</a>
+        <a href="about.html" class="glow-box bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">Learn More</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="text-center py-6 bg-gray-800 border-t border-gray-700 mt-auto">© 2025 Jeevanandh B — Portfolio</footer>
+
+  <script>
+    window.chatbaseConfig = { chatbotId: "AVNQB43y-KPnOtAoK09Z4" };
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" id="AVNQB43y-KPnOtAoK09Z4" defer></script>
+</body>
+</html>

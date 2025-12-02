@@ -1,0 +1,149 @@
+<!-- FILE: projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Jeevanandh B</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes breathe {
+      0%, 100% { 
+        background-color: rgb(17, 24, 39);
+      }
+      50% { 
+        background-color: rgb(31, 41, 55);
+      }
+    }
+    @keyframes breatheBoxDark {
+      0%, 100% { 
+        background-color: rgb(31, 41, 55);
+      }
+      50% { 
+        background-color: rgb(17, 24, 39);
+      }
+    }
+    body {
+      animation: breathe 6s ease-in-out infinite;
+    }
+    .glow-box {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease-in-out;
+      animation: breatheBoxDark 6s ease-in-out infinite;
+    }
+    .glow-box:hover {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+      transform: scale(1.02);
+      animation: flash 0.3s ease-in-out;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 flex flex-col min-h-screen">
+  <nav class="bg-gray-800 p-4 flex justify-between items-center shadow-lg">
+    <h1 class="font-bold text-xl">Jeevanandh</h1>
+    <div class="space-x-6 flex">
+      <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+      <a href="about.html" class="hover:text-blue-400 transition-colors">About</a>
+      <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+      <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <section class="max-w-6xl mx-auto mt-16 p-6 flex-grow">
+    <h2 class="text-4xl font-bold mb-12 text-center">My Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="glow-box bg-gray-800 rounded-xl p-8 mb-8 border border-gray-700 cursor-pointer">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">🎨 Plastic Identification Using AI</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-gray-300 mb-4">
+            An advanced EfficientNet-based deep learning model that classifies different types of plastics with high accuracy. 
+            This project demonstrates the application of computer vision and transfer learning in environmental sustainability.
+          </p>
+          <p class="text-gray-400 mb-2"><strong>Technologies:</strong> Python, TensorFlow, EfficientNet, CNN</p>
+          <p class="text-gray-400"><strong>Key Features:</strong> Image classification, Model optimization, Real-time prediction</p>
+        </div>
+        <div class="bg-gray-700 rounded-lg p-4">
+          <p class="text-sm text-gray-300">
+            <strong>Impact:</strong> Helps in automated plastic sorting and waste management, contributing to environmental conservation efforts.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="glow-box bg-gray-800 rounded-xl p-8 mb-8 border border-gray-700 cursor-pointer">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">🍽️ Cafeteria Tracker System</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-gray-300 mb-4">
+            A comprehensive web application built with Spring Boot and Thymeleaf for managing cafeteria operations. 
+            Features user-friendly interfaces for menu management, sales tracking, and user management.
+          </p>
+          <p class="text-gray-400 mb-2"><strong>Technologies:</strong> Spring Boot, Thymeleaf, MySQL, Java</p>
+          <p class="text-gray-400"><strong>Key Features:</strong> Menu management, Real-time sales tracking, User authentication</p>
+        </div>
+        <div class="bg-gray-700 rounded-lg p-4">
+          <p class="text-sm text-gray-300">
+            <strong>Impact:</strong> Streamlines cafeteria operations and provides valuable insights for business optimization.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="glow-box bg-gray-800 rounded-xl p-8 mb-8 border border-gray-700 cursor-pointer">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">☕ Java Leap Project</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-gray-300 mb-4">
+            A robust Java-based application demonstrating advanced OOP principles and design patterns. 
+            This project showcases structured backend logic and best practices in software development.
+          </p>
+          <p class="text-gray-400 mb-2"><strong>Technologies:</strong> Java, OOP, Design Patterns, Collections</p>
+          <p class="text-gray-400"><strong>Key Features:</strong> Object-oriented architecture, Efficient data structures, Clean code practices</p>
+        </div>
+        <div class="bg-gray-700 rounded-lg p-4">
+          <p class="text-sm text-gray-300">
+            <strong>Impact:</strong> Demonstrates mastery of core Java concepts and scalable application design.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Skills Section -->
+    <div class="mt-12">
+      <h3 class="text-2xl font-bold mb-6 text-center">Technical Skills Used</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-lg font-semibold text-blue-400 mb-3">Backend</h4>
+          <p class="text-gray-300">Java, Spring Boot, Python, Node.js, Express</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-lg font-semibold text-blue-400 mb-3">Frontend</h4>
+          <p class="text-gray-300">HTML5, CSS3, JavaScript, Thymeleaf, React</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-lg font-semibold text-blue-400 mb-3">AI/ML</h4>
+          <p class="text-gray-300">TensorFlow, Scikit-learn, Pandas, NumPy</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="bg-gray-800 text-center py-6 border-t border-gray-700 mt-auto">
+    © 2025 Jeevanandh B — Portfolio
+  </footer>
+
+  <script>
+    window.chatbaseConfig = { chatbotId: "AVNQB43y-KPnOtAoK09Z4" };
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" id="AVNQB43y-KPnOtAoK09Z4" defer></script>
+</body>
+</html>

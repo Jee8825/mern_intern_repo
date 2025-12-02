@@ -1,0 +1,129 @@
+<!-- FILE: about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Jeevanandh B</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes breathe {
+      0%, 100% { 
+        background-color: rgb(17, 24, 39);
+      }
+      50% { 
+        background-color: rgb(31, 41, 55);
+      }
+    }
+    @keyframes breatheBoxDark {
+      0%, 100% { 
+        background-color: rgb(31, 41, 55);
+      }
+      50% { 
+        background-color: rgb(17, 24, 39);
+      }
+    }
+    body {
+      animation: breathe 6s ease-in-out infinite;
+    }
+    .glow-box {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease-in-out;
+      animation: breatheBoxDark 6s ease-in-out infinite;
+    }
+    .glow-box:hover {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+      transform: scale(1.02);
+      animation: flash 0.3s ease-in-out;
+    }
+    .profile-img:hover {
+      animation: flash 0.3s ease-in-out;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 flex flex-col min-h-screen">
+  <nav class="bg-gray-800 p-4 flex justify-between items-center shadow-lg">
+    <h1 class="font-bold text-xl">Jeevanandh</h1>
+    <div class="space-x-6 flex">
+      <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+      <a href="about.html" class="hover:text-blue-400 transition-colors">About</a>
+      <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+      <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <section class="max-w-5xl mx-auto mt-16 p-6 flex-grow">
+    <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+
+    <!-- Profile Card -->
+    <div class="glow-box bg-gray-800 rounded-xl p-8 mb-12 border border-gray-700">
+      <div class="w-48 h-48 mx-auto mb-8">
+        <img src="BlueLaw.png" class="profile-img w-48 h-48 rounded-full object-cover border-4 border-blue-400 cursor-pointer" alt="Profile Photo" />
+      </div>
+      <p class="leading-relaxed text-gray-300 text-lg text-center mb-4">
+        I am a B.Tech AI & Data Science student passionate about building intelligent systems,
+        solving real-world problems and developing full-stack applications.
+      </p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-6">Education</h3>
+      <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700">
+        <h4 class="text-xl font-semibold text-blue-400">B.Tech in AI & Data Science</h4>
+        <p class="text-gray-400 mt-2">Sri Eshwar College of Engineering (SECE)</p>
+        <p class="text-gray-400">Pursuing excellence in AI, Machine Learning, and Data Analytics</p>
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-6">Experience & Expertise</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-semibold text-blue-400 mb-3">Programming Languages</h4>
+          <p class="text-gray-300">C, C++, Python, Java, JavaScript</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-semibold text-blue-400 mb-3">Web Technologies</h4>
+          <p class="text-gray-300">HTML5, CSS3, JavaScript, React, Node.js, Express</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-semibold text-blue-400 mb-3">Data Science Tools</h4>
+          <p class="text-gray-300">Python, Pandas, NumPy, Matplotlib, Scikit-learn</p>
+        </div>
+        <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700 cursor-pointer">
+          <h4 class="text-xl font-semibold text-blue-400 mb-3">Databases</h4>
+          <p class="text-gray-300">MySQL, MongoDB, Firebase</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interests Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-6">Interests & Passion</h3>
+      <div class="glow-box bg-gray-800 rounded-xl p-6 border border-gray-700">
+        <p class="text-gray-300 leading-relaxed">
+          I am deeply interested in Artificial Intelligence, Machine Learning, and Full-Stack Development. 
+          I love solving complex problems using data-driven approaches and creating applications that make a real impact. 
+          Beyond coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the community.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="bg-gray-800 text-center py-6 border-t border-gray-700 mt-auto">
+    © 2025 Jeevanandh B — Portfolio
+  </footer>
+
+  <script>
+    window.chatbaseConfig = { chatbotId: "AVNQB43y-KPnOtAoK09Z4" };
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" id="AVNQB43y-KPnOtAoK09Z4" defer></script>
+</body>
+</html>
