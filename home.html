@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LMS Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+    }
+
+    /* HEADER */
+    header {
+      background: black;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+    nav {
+      background: #333;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 16px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      padding: 50px;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .hero-text {
+      width: 50%;
+    }
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .hero-video {
+      width: 45%;
+    }
+    .hero-video video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 40px 50px;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    }
+
+    /* FOOTER */
+    footer {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+  <!-- Cyberpunk theme (overrides placed after internal rules) -->
+  <link rel="stylesheet" href="css/cyberpunk.css">
+</head>
+<body class="cyberpunk">
+
+<!-- HEADER -->
+<header>LMS Platform</header>
+
+<nav class="cyberpunk-nav">
+  <a href="home.html">Home</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="login.html">Login</a>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Learn Anything. Anytime. Anywhere.</h1>
+    <p>Welcome to your personalized Learning Management System—built to help you grow
+       with modern skills like AI, Data Science, Programming, Cloud, Cybersecurity,
+       DevOps, and more. We offer free, premium, and discounted courses to help you
+       upskill at your own pace.</p>
+    <p>Start learning today and unlock a world of opportunities!</p>
+  </div>
+
+  <div class="hero-video">
+    <video controls>
+      <source src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/abcd.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="section">
+  <h2>Why Choose Our LMS?</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Industry-Level Courses</h3>
+      <p>All courses are designed based on real-world requirements. You learn exactly
+         what companies look for in top tech roles.</p>
+    </div>
+
+    <div class="card">
+      <h3>Learn at Your Own Pace</h3>
+      <p>Whether you're a beginner or pro, each course is structured so you can learn
+         comfortably with progress tracking.</p>
+    </div>
+
+    <div class="card">
+      <h3>Updated Study Material</h3>
+      <p>We keep our course content updated with the latest tools, trends, and
+         technologies—never outdated content.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- COURSES OVERVIEW -->
+<div class="section">
+  <h2>Top Learning Categories</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>AI & Machine Learning</h3>
+      <p>Master ML algorithms, neural networks, deep learning and more.</p>
+    </div>
+
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Frontend, backend, full-stack — build modern web apps from scratch.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>Learn how to protect networks, systems, and data from attacks.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud & DevOps</h3>
+      <p>AWS, Docker, Kubernetes & deployment pipelines — all in one place.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Video Lectures</h3>
+      <p>HD-quality video lessons recorded by industry experts.</p>
+    </div>
+
+    <div class="card">
+      <h3>Assignments & Hands-on Labs</h3>
+      <p>Practical task-based learning to sharpen your real-world skills.</p>
+    </div>
+
+    <div class="card">
+      <h3>Certificates</h3>
+      <p>Receive industry-recognized certificates after completing courses.</p>
+    </div>
+
+    <div class="card">
+      <h3>24/7 Support</h3>
+      <p>We’re here to assist you anytime during your learning journey.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 LMS Platform • Designed for Learners • All Rights Reserved
+</footer>
+
+<!-- Sliding navbar panel script -->
+<script>
+(function(){
+  function initNavPanel() {
+    const nav = document.querySelector('nav');
+    const links = nav.querySelectorAll('a');
+    
+    function updatePanel(link) {
+      const rect = link.getBoundingClientRect();
+      const navRect = nav.getBoundingClientRect();
+      const offset = rect.left - navRect.left;
+      const width = rect.width;
+      
+      nav.style.setProperty('--panel-left', offset + 'px');
+      nav.style.setProperty('--panel-width', width + 'px');
+    }
+    
+    function setActiveLink() {
+      const currentFile = window.location.pathname.split('/').pop() || 'home.html';
+      
+      links.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        
+        // Check if this link matches the current page
+        if (href === currentFile || (currentFile === '' && href === 'home.html')) {
+          link.classList.add('active');
+          updatePanel(link);
+        }
+      });
+    }
+    
+    // Set initial panel position based on current page
+    setActiveLink();
+    
+    // Update panel on link click
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        updatePanel(link);
+        
+        // Store active link in sessionStorage for persistence
+        const href = link.getAttribute('href');
+        sessionStorage.setItem('activeNavLink', href);
+      });
+    });
+    
+    // Update panel on window resize
+    window.addEventListener('resize', () => {
+      const activeLink = nav.querySelector('a.active');
+      if (activeLink) updatePanel(activeLink);
+    });
+  }
+  
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavPanel);
+  } else {
+    initNavPanel();
+  }
+})();
+</script>
+
+</body>
+</html>

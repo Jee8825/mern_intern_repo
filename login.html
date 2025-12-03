@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f5f5f5; display: flex; height: 100vh; justify-content: center; align-items: center; }
-        .container { background: #fff; padding: 20px 40px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        input { display: block; width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-        button { padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #0056b3; }
-        .message { margin-top: 10px; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <title>LMS Login</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    /* Left side image */
+    .left-side {
+      flex: 1;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Right side login form */
+    .right-side {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f7f9fc;
+    }
+
+    .login-box {
+      width: 350px;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background: #0056b3;
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-footer a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login / Register</button>
+
+  <div class="container">
+    <div class="left-side"></div>
+    <div class="right-side">
+      <div class="login-box">
+        <h2>Login to LMS</h2>
+        <form action="dashboard.html">
+          <input type="text" placeholder="Username or Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Login</button>
         </form>
-        <div class="message" id="message"></div>
+        <div class="login-footer">
+          <a href="home.html">Back to Home</a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-        const form = document.getElementById('loginForm');
-        const message = document.getElementById('message');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            try {
-                const response = await fetch('http://127.0.0.1:5000/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username, password })
-                });
-
-                const data = await response.json();
-                message.textContent = data.message;
-                message.style.color = data.status === 'success' || data.status === 'created' ? 'green' : 'red';
-            } catch (err) {
-                message.textContent = 'Something went wrong!';
-                message.style.color = 'red';
-                console.error(err);
-            }
-        });
-    </script>
 </body>
 </html>

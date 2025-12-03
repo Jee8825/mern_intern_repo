@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LMS Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+    }
+    header {
+      background: black;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+    nav {
+      background: #333;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    .container {
+      padding: 30px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .course-section {
+      margin-bottom: 40px;
+    }
+    .course-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .course-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    }
+    .course-box img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .buy-btn, .open-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .buy-btn { background: #007bff; }
+    .open-btn { background: #28a745; }
+    .offer-tag {
+      color: red;
+      font-weight: bold;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+  <!-- Cyberpunk theme (overrides placed after internal rules) -->
+  <link rel="stylesheet" href="css/cyberpunk.css">
+</head>
+<body class="cyberpunk">
+
+<header>LMS Platform</header>
+<nav class="cyberpunk-nav">
+  <a href="home.html">Home</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+  <!-- Purchase Courses -->
+  <div class="course-section">
+    <h2>Purchasable Courses 💰</h2>
+    <div class="course-list">
+      <!-- Full Stack -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/Full-Stack-Development-Course.jpg" alt="Full Stack">
+              <div class="card-meta">
+                <h3>Full Stack Web Development</h3>
+                <p class="price">₹1999</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Full Stack Web Development</h3>
+                <p>Learn HTML, CSS, JavaScript, React, Node.js, databases and API building. Work on real-world full-stack projects and deploy responsive applications.</p>
+              </div>
+              <div>
+                <p>₹1999</p>
+                <button class="buy-btn">Buy Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Data Science -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/Python-Data-Science-Courses.webp" alt="Data Science">
+              <div class="card-meta">
+                <h3>Data Science with Python</h3>
+                <p class="price">₹2499</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Data Science with Python</h3>
+                <p>Master Python, NumPy, Pandas, Matplotlib, machine learning models, and real-world analytics techniques. Learn data cleaning, visualization, feature engineering and model deployment.</p>
+              </div>
+              <div>
+                <p>₹2499</p>
+                <button class="buy-btn">Buy Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DevOps -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/Devops.png" alt="DevOps">
+              <div class="card-meta">
+                <h3>DevOps Essentials</h3>
+                <p class="price">₹2999</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>DevOps Essentials</h3>
+                <p>Understand CI/CD pipelines, Docker, Kubernetes, version control workflows, monitoring tools and automation strategies used in modern software companies.</p>
+              </div>
+              <div>
+                <p>₹2999</p>
+                <button class="buy-btn">Buy Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Flutter -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/flutter.png" alt="Flutter">
+              <div class="card-meta">
+                <h3>Mobile App Development (Flutter)</h3>
+                <p class="price">₹2799</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Mobile App Development (Flutter)</h3>
+                <p>Create beautiful Android & iOS apps using Flutter and Dart. Learn UI design, navigation, state management and Firebase integration.</p>
+              </div>
+              <div>
+                <p>₹2799</p>
+                <button class="buy-btn">Buy Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offer Courses -->
+  <div class="course-section">
+    <h2>Special Offers ⚡</h2>
+    <div class="course-list">
+      <!-- AI & ML -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/AI-ML 2.jpeg" alt="AI-ML">
+              <div class="card-meta">
+                <h3>AI & Machine Learning</h3>
+                <p class="price">₹1499</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>AI & Machine Learning</h3>
+                <p>Learn supervised and unsupervised ML, neural networks, AI models, real-world datasets, and practical model building.</p>
+              </div>
+              <div>
+                <p><span class="offer-tag">50% OFF</span> – Now ₹1499</p>
+                <button class="buy-btn">Buy with Offer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cybersecurity -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/cybersecurity-fundamentals.jpg" alt="Cybersecurity">
+              <div class="card-meta">
+                <h3>Cybersecurity Fundamentals</h3>
+                <p class="price">₹999</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Cybersecurity Fundamentals</h3>
+                <p>Understand threats, vulnerabilities, attacks, encryption, firewalls, network security and ethical hacking basics.</p>
+              </div>
+              <div>
+                <p><span class="offer-tag">30% OFF</span> – Now ₹999</p>
+                <button class="buy-btn">Buy with Offer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- AWS -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/aws.jpg" alt="AWS">
+              <div class="card-meta">
+                <h3>Cloud Computing (AWS)</h3>
+                <p class="price">₹1199</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Cloud Computing (AWS)</h3>
+                <p>Learn EC2, S3, IAM, Lambda, VPC, RDS and full cloud-based deployment. Understand cloud architectures and build scalable cloud applications.</p>
+              </div>
+              <div>
+                <p><span class="offer-tag">40% OFF</span> – Now ₹1199</p>
+                <button class="buy-btn">Buy with Offer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- UI/UX -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/UIUX-Designer.png" alt="UIUX">
+              <div class="card-meta">
+                <h3>UI/UX Design Blueprint</h3>
+                <p class="price">₹799</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>UI/UX Design Blueprint</h3>
+                <p>Learn user research, wireframing, prototyping, design tools, visual design principles and usability testing.</p>
+              </div>
+              <div>
+                <p><span class="offer-tag">25% OFF</span> – Now ₹799</p>
+                <button class="buy-btn">Buy with Offer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Free Courses -->
+  <div class="course-section">
+    <h2>Free Courses 🆓</h2>
+    <div class="course-list">
+      <!-- HTML & CSS -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/HTML-CSS.png" alt="HTML CSS">
+              <div class="card-meta">
+                <h3>HTML & CSS Basics</h3>
+                <p class="price">FREE</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>HTML & CSS Basics</h3>
+                <p>Learn how websites are built using HTML structure and CSS styling. Understand layouts, colors, fonts, components, and responsive design foundations.</p>
+              </div>
+              <div>
+                <button class="open-btn">Open Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Git/GitHub -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/gitHub.jpg" alt="Git GitHub">
+              <div class="card-meta">
+                <h3>Git & GitHub Essentials</h3>
+                <p class="price">FREE</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Git & GitHub Essentials</h3>
+                <p>Master version control, branches, commits, merges, pull requests and collaboration workflows used by developers worldwide.</p>
+              </div>
+              <div>
+                <button class="open-btn">Open Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- C Programming -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/Cprogramming.webp" alt="C Programming">
+              <div class="card-meta">
+                <h3>C Programming Basics</h3>
+                <p class="price">FREE</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>C Programming Basics</h3>
+                <p>Understand variables, loops, conditions, arrays, functions and memory concepts. Build a strong foundation in C, essential for system-level programming.</p>
+              </div>
+              <div>
+                <button class="open-btn">Open Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Python Fundamentals -->
+      <div class="course-box">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Users/Jee/College/II Year/MERN_Intern/Day_2/Web/imgs/PythonFundamentals.jpeg" alt="Python">
+              <div class="card-meta">
+                <h3>Python Fundamentals</h3>
+                <p class="price">FREE</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <h3>Python Fundamentals</h3>
+                <p>Learn the basics of Python including syntax, loops, functions, data structures, modules and practical scripting.</p>
+              </div>
+              <div>
+                <button class="open-btn">Open Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 LMS Platform • All Rights Reserved
+</footer>
+
+<!-- Flip-card toggle script -->
+<script>
+(function(){
+  // Flip-card toggle
+  const cards = document.querySelectorAll('.flip-card');
+  cards.forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+    card.addEventListener('keydown', e => { 
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.classList.toggle('flipped');
+      }
+    });
+  });
+  
+  // Sliding navbar panel
+  function initNavPanel() {
+    const nav = document.querySelector('nav');
+    const links = nav.querySelectorAll('a');
+    
+    function updatePanel(link) {
+      const rect = link.getBoundingClientRect();
+      const navRect = nav.getBoundingClientRect();
+      const offset = rect.left - navRect.left;
+      const width = rect.width;
+      
+      nav.style.setProperty('--panel-left', offset + 'px');
+      nav.style.setProperty('--panel-width', width + 'px');
+    }
+    
+    function setActiveLink() {
+      const currentFile = window.location.pathname.split('/').pop() || 'home.html';
+      
+      links.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        
+        // Check if this link matches the current page
+        if (href === currentFile || (currentFile === '' && href === 'home.html')) {
+          link.classList.add('active');
+          updatePanel(link);
+        }
+      });
+    }
+    
+    // Set initial panel position based on current page
+    setActiveLink();
+    
+    // Update panel on link click
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        updatePanel(link);
+        
+        // Store active link in sessionStorage for persistence
+        const href = link.getAttribute('href');
+        sessionStorage.setItem('activeNavLink', href);
+      });
+    });
+    
+    // Update panel on window resize
+    window.addEventListener('resize', () => {
+      const activeLink = nav.querySelector('a.active');
+      if (activeLink) updatePanel(activeLink);
+    });
+  }
+  
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavPanel);
+  } else {
+    initNavPanel();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* Cyberpunk dark theme for pages (applied via body.cyberpunk) */
+/* Background, neon accents, glowing boxes, and rounded corners */
+
+/* Breathing animation - EXTREMELY DRAMATIC & VISIBLE - NEW COLOR PALETTE */
+@keyframes breathingBackground {
+  0% {
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(0, 255, 255, 0.02), transparent 10%),
+                radial-gradient(900px 400px at 90% 90%, rgba(255, 0, 255, 0.01), transparent 10%),
+                linear-gradient(180deg, #000000 0%, #050208 40%, #000000 100%);
+    filter: brightness(0.5);
+  }
+  25% {
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(0, 255, 200, 0.25), transparent 10%),
+                radial-gradient(900px 400px at 90% 90%, rgba(255, 50, 200, 0.15), transparent 10%),
+                linear-gradient(180deg, #0a1a2a 0%, #1a0d30 40%, #2a0d3a 100%);
+    filter: brightness(0.8);
+  }
+  50% {
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(100, 255, 255, 0.55), transparent 10%),
+                radial-gradient(900px 400px at 90% 90%, rgba(255, 0, 100, 0.35), transparent 10%),
+                linear-gradient(180deg, #1a4a6a 0%, #3a2a60 40%, #2a3a6a 100%);
+    filter: brightness(1.3);
+  }
+  75% {
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(0, 255, 200, 0.25), transparent 10%),
+                radial-gradient(900px 400px at 90% 90%, rgba(255, 50, 200, 0.15), transparent 10%),
+                linear-gradient(180deg, #0a1a2a 0%, #1a0d30 40%, #2a0d3a 100%);
+    filter: brightness(0.8);
+  }
+  100% {
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(0, 255, 255, 0.02), transparent 10%),
+                radial-gradient(900px 400px at 90% 90%, rgba(255, 0, 255, 0.01), transparent 10%),
+                linear-gradient(180deg, #000000 0%, #050208 40%, #000000 100%);
+    filter: brightness(0.5);
+  }
+}
+
+/* Breathing animation for boxes - EXTREME OPPOSITE CONTRAST - NEW COLORS */
+@keyframes breathingCards {
+  0% {
+    filter: brightness(1.8) saturate(1.5) drop-shadow(0 0 30px rgba(0, 255, 200, 0.6)) drop-shadow(0 0 60px rgba(255, 0, 150, 0.4));
+    transform: scale(1.02);
+  }
+  25% {
+    filter: brightness(1.5) saturate(1.3) drop-shadow(0 0 20px rgba(100, 200, 255, 0.4)) drop-shadow(0 0 40px rgba(255, 50, 200, 0.2));
+    transform: scale(1.01);
+  }
+  50% {
+    filter: brightness(0.5) saturate(0.3) drop-shadow(0 0 5px rgba(0, 255, 255, 0.1));
+    transform: scale(0.99);
+  }
+  75% {
+    filter: brightness(1.5) saturate(1.3) drop-shadow(0 0 20px rgba(100, 200, 255, 0.4)) drop-shadow(0 0 40px rgba(255, 50, 200, 0.2));
+    transform: scale(1.01);
+  }
+  100% {
+    filter: brightness(1.8) saturate(1.5) drop-shadow(0 0 30px rgba(0, 255, 200, 0.6)) drop-shadow(0 0 60px rgba(255, 0, 150, 0.4));
+    transform: scale(1.02);
+  }
+}
+
+/* Page background */
+body.cyberpunk {
+  color: #e6e0ff;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  animation: breathingBackground 5s ease-in-out infinite;
+}
+
+/* Header and nav */
+body.cyberpunk header {
+  background: linear-gradient(90deg, rgba(20,10,40,0.9), rgba(30,10,60,0.9));
+  color: #ffd9ff;
+  box-shadow: 0 4px 30px rgba(147,80,255,0.08), 0 0 18px rgba(0,255,214,0.04) inset;
+}
+body.cyberpunk nav {
+  background: rgba(10,10,20,0.45);
+  border-bottom: 1px solid rgba(147,80,255,0.12);
+}
+body.cyberpunk nav a {
+  color: #e9b7ff;
+}
+body.cyberpunk nav a:hover {
+  text-shadow: 0 0 8px rgba(147,80,255,0.6);
+}
+
+/* General section/card styling */
+body.cyberpunk .hero,
+body.cyberpunk .card,
+body.cyberpunk .course-box,
+body.cyberpunk .login-box {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(147,80,255,0.12);
+  box-shadow:
+    0 6px 30px rgba(20,10,40,0.6),
+    0 0 18px rgba(147,80,255,0.06),
+    0 0 28px rgba(0,255,214,0.03);
+  border-radius: 14px;
+  color: #efe7ff;
+  animation: breathingCards 5s ease-in-out infinite;
+}
+
+/* Cards and boxes sizing tweaks */
+body.cyberpunk .card,
+body.cyberpunk .course-box {
+  background-clip: padding-box;
+}
+
+/* Neon accents for headings and buttons */
+body.cyberpunk h1, body.cyberpunk h2, body.cyberpunk h3 {
+  color: #ffd1ff;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6), 0 0 10px rgba(147,80,255,0.12);
+}
+body.cyberpunk .buy-btn,
+body.cyberpunk .open-btn,
+body.cyberpunk button {
+  background: linear-gradient(90deg,#9b59ff,#00ffd5);
+  color: #0b0022;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(155,89,255,0.18), 0 0 18px rgba(0,255,213,0.06);
+  transition: all 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body.cyberpunk .buy-btn:hover,
+body.cyberpunk .open-btn:hover,
+body.cyberpunk button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(155,89,255,0.22), 0 0 30px rgba(0,255,213,0.1);
+}
+
+/* Slight glass effect for images */
+body.cyberpunk img {
+  border-radius: 8px;
+  filter: saturate(1.05) contrast(1.02) brightness(0.98);
+  transition: filter 350ms ease, transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body.cyberpunk img:hover {
+  filter: saturate(1.15) contrast(1.05) brightness(1.05);
+  transform: scale(1.02);
+}
+
+/* Cards grid glow on hover */
+body.cyberpunk .card:hover,
+body.cyberpunk .course-box:hover {
+  box-shadow:
+    0 12px 40px rgba(20,10,40,0.6),
+    0 0 30px rgba(147,80,255,0.16),
+    0 0 40px rgba(0,255,214,0.08);
+  transform: translateY(-6px);
+  transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Footer tweaks */
+body.cyberpunk footer {
+  background: rgba(0,0,0,0.25);
+  color: #d7c6ff;
+  border-top: 1px solid rgba(147,80,255,0.06);
+}
+
+/* Utility: subtle page container fade */
+body.cyberpunk .container,
+body.cyberpunk .section {
+  background: transparent;
+}
+
+/* Make sure hero video has rounded corners in theme */
+body.cyberpunk .hero-video video {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 14px rgba(147,80,255,0.06);
+}
+
+/* Responsive small-screen adjustments */
+@media (max-width: 700px) {
+  body.cyberpunk .cards, body.cyberpunk .course-list {
+    flex-direction: column;
+  }
+}
+
+/* Modern navbar - glossy sliding panel over the text */
+/* Stronger selectors for the nav to ensure theme overrides page defaults */
+body.cyberpunk nav,
+body.cyberpunk nav.cyberpunk-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 0 0 12px 12px;
+  backdrop-filter: blur(6px) saturate(1.05);
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) !important;
+  border-bottom: 1px solid rgba(147,80,255,0.10) !important;
+  position: relative;
+  --panel-left: 10px;
+  --panel-width: 80px;
+}
+
+/* Sliding glass panel background */
+body.cyberpunk nav::before {
+  content: "";
+  position: absolute;
+  left: var(--panel-left);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--panel-width);
+  height: 36px;
+  background: linear-gradient(135deg, rgba(147,89,255,0.25), rgba(0,255,214,0.15));
+  border: 1px solid rgba(147,89,255,0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.2),
+    inset 0 -1px 0 rgba(0,0,0,0.2),
+    0 8px 32px rgba(31, 38, 135, 0.17),
+    0 0 30px rgba(147,80,255,0.08),
+    0 0 18px rgba(0,255,214,0.04);
+  transition: left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94), width 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Nav links */
+/* target both generic nav links and the more specific nav.cyberpunk-nav a */
+body.cyberpunk nav a,
+body.cyberpunk nav.cyberpunk-nav a {
+  position: relative;
+  padding: 10px 16px;
+  color: #e9b7ff;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: 600;
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+/* glossy sliding panel: implemented with ::before pseudo-element */
+body.cyberpunk nav a::before {
+  content: "";
+  position: absolute;
+  left: -15%;
+  top: -10%;
+  width: 140%;
+  height: 120%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.06));
+  transform: translateX(-120%) skewX(-12deg);
+  transition: transform 450ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 300ms ease;
+  opacity: 0.95;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  filter: blur(0.6px) contrast(1.02);
+}
+
+/* Slide in on hover/focus */
+body.cyberpunk nav a:hover::before,
+body.cyberpunk nav a:focus::before {
+  transform: translateX(0) skewX(-12deg);
+}
+
+/* Glow and movement on hover */
+body.cyberpunk nav a:hover,
+body.cyberpunk nav a:focus,
+body.cyberpunk nav.cyberpunk-nav a:hover,
+body.cyberpunk nav.cyberpunk-nav a:focus {
+  color: #fff;
+  text-shadow: 0 4px 14px rgba(147,80,255,0.16), 0 0 10px rgba(0,255,214,0.04);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(147,80,255,0.06);
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Active link indicator */
+body.cyberpunk nav a.active::after,
+body.cyberpunk nav.cyberpunk-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 6px;
+  height: 3px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(155,89,255,0.9), rgba(0,255,213,0.9));
+  box-shadow: 0 6px 18px rgba(155,89,255,0.18), 0 0 24px rgba(0,255,213,0.06);
+}
+
+/* Add light text effect for active link */
+body.cyberpunk nav a.active {
+  color: #fff;
+  text-shadow: 0 0 12px rgba(147,80,255,0.4), 0 0 20px rgba(0,255,214,0.2);
+}
+
+/* Make nav accessible on small screens */
+@media (max-width: 600px) {
+  body.cyberpunk nav {
+    padding: 8px 12px;
+    gap: 8px;
+    overflow-x: auto;
+  }
+  body.cyberpunk nav a { padding: 8px 12px; font-size: 15px; }
+}
+
+/* Flip card styles for course boxes */
+body.cyberpunk .flip-card {
+  width: 300px;
+  height: 360px;
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+body.cyberpunk .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-style: preserve-3d;
+}
+body.cyberpunk .flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+body.cyberpunk .flip-card .flip-card-front,
+body.cyberpunk .flip-card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: breathingCards 5s ease-in-out infinite;
+}
+body.cyberpunk .flip-card .flip-card-front {
+  z-index: 2;
+}
+body.cyberpunk .flip-card .flip-card-front img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+body.cyberpunk .flip-card .card-meta {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body.cyberpunk .flip-card .card-meta h3{
+  margin: 0;
+  font-size: 18px;
+}
+body.cyberpunk .flip-card .card-meta .price{
+  margin-top: auto;
+  font-weight: 700;
+  color: #ffd6ff;
+}
+
+body.cyberpunk .flip-card .flip-card-back {
+  background: linear-gradient(180deg, rgba(10,6,20,0.85), rgba(25,8,45,0.9));
+  transform: rotateY(180deg);
+  padding: 16px;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+body.cyberpunk .flip-card .flip-card-back h3{ margin: 0 0 8px 0; }
+body.cyberpunk .flip-card .flip-card-back p{ color: #dcd0ff; line-height: 1.4; }
+
+/* keep existing course-box visual treatments for compatibility */
+body.cyberpunk .course-box {
+  background: transparent;
+  padding: 0;
+  width: 300px;
+  box-shadow: none;
+}
+
+/* ensure buttons align on back */
+body.cyberpunk .flip-card .flip-card-back .buy-btn,
+body.cyberpunk .flip-card .flip-card-back .open-btn{
+  width: 100%;
+}
+
+/* keyboard focus */
+body.cyberpunk .flip-card:focus {
+  outline: 2px solid rgba(155,89,255,0.14);
+  outline-offset: 4px;
+}
